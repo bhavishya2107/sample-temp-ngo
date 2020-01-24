@@ -105,7 +105,9 @@
 			<div class="container">
 				<div class="row">
 					<!--Start Map-->
-					<div id="map" style="height: 450px;"></div>
+					<div id="map" style="height: 450px;">
+						<div class="mapouter"><div class="gmap_canvas"><iframe width="1000" height="304" id="gmap_canvas" src="https://maps.google.com/maps?q=ghoomakad&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://ytify.com">youtube to mp3</a></div><style>.mapouter{position:relative;text-align:right;height:304px;width:798px;}.gmap_canvas {overflow:hidden;background:none!important;height:304px;width:798px;}</style></div>
+					</div>
 					<!--End Map-->
 					<div class="col-md-4 box-item">
 						<h3>Contact Info</h3>
@@ -156,6 +158,8 @@
 			</div>
 		</section>
 	</div>
+
+
 		
 	<!--////////////////////////////////////Footer-->
 	<footer id="footer">
@@ -184,69 +188,7 @@
 	<script src="js/jquery.scrollTo.min.js"></script>
 	<script src="js/SmoothScroll.js"></script>
 	<script src="js/wow.min.js"></script>
-	
-	<!-- Google Map -->
-	<script>
-	  var marker;
-	  var image = 'images/map-marker.png';
-      function initMap() {
-        var myLatLng = {lat: 39.79, lng: -86.14};
 
-		// Specify features and elements to define styles.
-        var styleArray = [
-          {
-            featureType: "all",
-            stylers: [
-             { saturation: -80 }
-            ]
-          },{
-            featureType: "road.arterial",
-            elementType: "geometry",
-            stylers: [
-              { hue: "#000000" },
-              { saturation: 50 }
-            ]
-          },{
-            featureType: "poi.business",
-            elementType: "labels",
-            stylers: [
-              { visibility: "off" }
-            ]
-          }
-        ];
-		
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
-          scrollwheel: false,
-		   // Apply the map style array to the map.
-          styles: styleArray,
-          zoom: 7
-        });
-
-        var directionsDisplay = new google.maps.DirectionsRenderer({
-          map: map
-        });
-
-		// Create a marker and set its position.
-        marker = new google.maps.Marker({
-          map: map,
-		  icon: image,
-		  draggable: true,
-          animation: google.maps.Animation.DROP,
-          position: myLatLng
-        });
-		marker.addListener('click', toggleBounce);
-      }
-	  
-	  function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-          marker.setAnimation(null);
-        } else {
-          marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7V-mAjEzzmP6PCQda8To0ZW_o3UOCVCE&callback=initMap" async defer></script>
 	
 	<!-- Definity JS -->
 	<script src="js/main.js"></script>
