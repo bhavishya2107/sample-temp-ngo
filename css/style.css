@@ -65,6 +65,7 @@ input:not([type]), input[type="color"], input[type="email"], input[type="number"
     padding-left: 0;
 }
 
+
 .post{}
 .post:after, .post:before, article:after, article:before, section:after, section:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
 
@@ -116,7 +117,7 @@ body.sub-page #menu {padding: 10px 0;}
 #menu .navbar-brand{margin: 0;height: auto;padding: 0px 18px;}
 #menu .navbar-brand img{max-width: 160px;}
 #menu .logo {}
-#menu .dropdown-menu {background-color: #EDD9C0;border:none;border-radius: 0;}
+#menu .dropdown-menu {background-color: #EDD9C0;border:none;border-radius: 0; z-index: 1;}
 
 #menu ul.nav .dropdown-menu li a{color: #1a1c1e;}
 #menu ul.nav .dropdown-menu li a:hover{}
@@ -372,3 +373,11 @@ footer .copyright{padding: 15px 0;font-size: 16px;}
 .link li:after{content: "-";padding: 0 10px;}
 .link li:last-child:after{content:'';padding:0px;display:none}
 ul.link li{padding: 0;margin: 0;}
+
+
+.title-sram {
+    font-size: 15px;
+    font-weight: 700;
+    word-spacing: normal;
+    letter-spacing: 1px;
+}
